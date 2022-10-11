@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes app</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .p_heading {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        grid-gap: 0.5rem;
+      }
+      #navbar {
+        /* border: 3px solid black; */
+        color: white;
+        background-color: black;
+        display: flex;
+        margin: 5px 7px;
+        padding: 5px 17px;
+        border-radius: 15px;
+      }
+      nav .search_box {
+        position: absolute;
+        /* border: 3px solid black; */
+        right: 30px;
+        top: 10px;
+        padding-top: 4px;
+        margin: 2px;
+      }
+      #inputtxt {
+        padding: 3px;
+        border-radius: 5px;
+      }
+      .btn {
+        border-radius: 5px;
+        width: 100px;
+        padding: 3px;
+        background-color: rgb(97, 218, 242);
+      }
+      .btn:hover {
+        background-color: rgb(120, 228, 255);
+      }
+      .box{
+        /* border: 2px solid red; */
+        width: 70vw;
+        margin: auto;
+        height: 85%;
+      }
+      #textArea{
+        width: 650px;
+        height: 55px;
+      }
+      .enter_notes{
+        /* margin: 12px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px 5px;
+      }
+      .notes_details{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 2px;
+        width: 100%;
+        grid-gap: 5px;
+      }
+      .box1{
+        border: 1px solid rgb(116, 116, 116);
+        padding:12px;
+        /* width: 31%; */
+      }
+      .box1:hover{
+        box-shadow: 2px 2px 1px rgb(144, 142, 142);
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <h3 class="p_heading">magic notes</h3>
+        <div class="search_box">
+          <input type="text" id="inputtxt" placeholder="search" />
+          <button class="btn">search</button>
+        </div>
+      </nav>
+      <div class="box" id="box">
+        <div class="enter_notes">
+            <h2 class="p_heading">Enter your notes here</h2>
+            <textarea name="myText" id="textArea" cols="30" rows="10"></textarea>
+            <button id="add_note" class="btn">Add Note</button>
+        </div>
+        <hr>
+        <h1 class="p_heading">Your Notes</h1>
+        <hr>
+        <div class="notes_details">
+          <!-- <div class="box1">
+            <h4>Note ${index}</h4>
+            <p>${element}</p>
+            <button class="btn">delete note</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
